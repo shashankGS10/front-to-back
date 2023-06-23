@@ -13,7 +13,7 @@ const PokemonListAF = () => {
         setTimeout(async () => {
           const response = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=10&offset=10');
           const data = await response.json();
-          setPokemonData(data.results);
+          setPokemonData(data.results); // 10 pokemons (limit 10 )
           setIsLoading(false); // Set loading state to false when data is fetched
         }, 5000); //5 seconds of lag to show how Async works
       } catch (error) {

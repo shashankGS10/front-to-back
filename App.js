@@ -7,7 +7,9 @@ import PokemonListSF from './src/screens/PokemonScreenSyncFetch';
 import PokemonListAF from './src/screens/PokemonScreenAsyncFetch';
 import PokemonListAA from "./src/screens/PokemonScreenAsyncAxios"; 
 import PokemonListSA from "./src/screens/PokemonScreenSyncAxios"; 
-import ErrorHandle from './src/screens/ErrorHandling'
+import ErrorHandle from './src/screens/ErrorHandling';
+import ChatApp from './src/screens/chatApp';
+import CrudComponent from './src/screens/CurdComponent'
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +23,8 @@ function App() {
         <Stack.Screen name="AsyncFetch" component={PokemonListAF} />
         <Stack.Screen name="AsyncAxios" component={PokemonListAA} />
         <Stack.Screen name="ErrorDay" component={ErrorHandle} />
+        <Stack.Screen name="Chat" component={ChatApp} />
+        <Stack.Screen name="Crud" component={CrudComponent} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -8,7 +8,7 @@ const PokemonListAA = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [loading, setLoading] = useState(true); // Loading status
 
-  useEffect(() => {
+  useEffect(() => { // handling list of pokemons
     const fetchData = async () => {
       try {
         // Simulating a delay of 5 seconds using setTimeout
@@ -21,11 +21,11 @@ const PokemonListAA = () => {
         console.error('Error:', error);
       }
     };
-
     fetchData();
   }, []);
 
   const handlePokemonSelect = async (pokemon) => {
+    // is being used to populate details of selected pokemon
     try {
       const response = await axios.get(pokemon.url);
       setSelectedPokemon(response.data);

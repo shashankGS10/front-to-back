@@ -19,7 +19,6 @@ const PokemonListSA = () => {
   }, []);
 
   const handlePokemonSelect = (pokemon) => {
-
     axios
       .get(pokemon.url)
       .then(response => {

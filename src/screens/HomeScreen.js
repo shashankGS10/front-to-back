@@ -21,6 +21,12 @@ const HomeScreen = () => {
       <Link to="/ErrorDay">
         <Text>Error Test</Text>
       </Link>
+      <Link to="/Chat">
+        <Text>Let's Chat</Text>
+      </Link>
+      <Link to="/Crud">
+        <Text>CRUD Restful APIs</Text>
+      </Link>
     </View>
   );
 };
