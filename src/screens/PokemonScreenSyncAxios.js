@@ -3,15 +3,16 @@ import axios from 'axios';
 import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet, Modal, TouchableWithoutFeedback } from 'react-native';
 
 const PokemonListSA = () => {
-  const [pokemonData, setPokemonData] = useState([]);
-  const [selectedPokemon, setSelectedPokemon] = useState(null);
-  const [modalVisible, setModalVisible] = useState(false);
+  const [pokemonData, setPokemonData] = useState([]); // State to hold the fetched Pokemon data
+  const [selectedPokemon, setSelectedPokemon] = useState(null); // State to hold the selected Pokemon
+  const [modalVisible, setModalVisible] = useState(false); // State to control the visibility of the modal
 
   useEffect(() => {
+    // Fetch Pokemon data when the component mounts
     axios
       .get('https://pokeapi.co/api/v2/pokemon/?limit=10&offset=10')
       .then(response => {
-        setPokemonData(response.data.results);
+        setPokemonData(response.data.results); // Update the state with the fetched Pokemon data
       })
       .catch(error => {
         console.error('Error:', error);
@@ -19,11 +20,12 @@ const PokemonListSA = () => {
   }, []);
 
   const handlePokemonSelect = (pokemon) => {
+    // Fetch the details of the selected Pokemon
     axios
       .get(pokemon.url)
       .then(response => {
-        setSelectedPokemon(response.data);
-        setModalVisible(true);
+        setSelectedPokemon(response.data); // Update the state with the selected Pokemon's details
+        setModalVisible(true); // Show the modal to display the selected Pokemon's details
       })
       .catch(error => {
         console.error('Error:', error);

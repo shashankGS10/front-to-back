@@ -1,0 +1,14 @@
+{
+  "name": "dummyserver",
+  "version": "1.0.0",
+  "description": "Dummy Backend to explain how CRUD operations work in BE",
+  "main": "exampleServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shashank GS",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

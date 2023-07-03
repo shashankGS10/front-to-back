@@ -41,3 +41,7 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+// Component Hierarchy => App.js is entry point where we are creating Routs to navigate over app
+// Data Fetching and Rendering Data => Show API call on codes and explain how Data is being used to generate UI. File - src/screens/PokemonScreenSyncAxios.js
+// State Management and Event handling => explain how useState works and go throught code to explain how we are canging state
+// Styling => Explain StyleSheet and Inline styling
